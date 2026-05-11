@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Regina的个人小屋 - 首页</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --wood-dark: #5D4037;
+            --wood-medium: #8D6E63;
+            --wood-light: #D7CCC8;
+            --warm-bg: #FDF5E6;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--warm-bg);
+            color: var(--wood-dark);
+        }
+
+        .cabin-title {
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        .wood-card {
+            background: #fff;
+            border: 1px solid var(--wood-light);
+            box-shadow: 0 4px 6px -1px rgba(141, 110, 99, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .wood-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(141, 110, 99, 0.2);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--wood-medium);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .wood-texture {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 Q 25 45 50 50 T 100 50' fill='none' stroke='%238D6E63' stroke-opacity='0.05'/%3E%3Cpath d='M0 20 Q 25 15 50 20 T 100 20' fill='none' stroke='%238D6E63' stroke-opacity='0.05'/%3E%3Cpath d='M0 80 Q 25 75 50 80 T 100 80' fill='none' stroke='%238D6E63' stroke-opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="wood-texture min-h-screen">
+<!-- 导航栏 -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-wood-light/30">
+<div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-wood-dark rounded-lg flex items-center justify-center text-white">
+<iconify-icon icon="lucide:home" width="24"></iconify-icon>
+</div>
+<span class="cabin-title text-2xl font-bold tracking-wider">Regina的小屋</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-medium">
+<a class="nav-link text-wood-dark" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/index.html?render_html=true">首页</a>
+<a class="nav-link text-gray-500 hover:text-wood-dark" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/blog.html?render_html=true">随笔林间</a>
+<a class="nav-link text-gray-500 hover:text-wood-dark" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/gallery.html?render_html=true">流光碎影</a>
+<a class="nav-link text-gray-500 hover:text-wood-dark" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/collection.html?render_html=true">灵魂角落</a>
+<a class="nav-link text-gray-500 hover:text-wood-dark" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/guestbook.html?render_html=true">暖心寄语</a>
+</div>
+<button class="bg-wood-dark text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-wood-medium transition-colors">
+                联系我
+            </button>
+</div>
+</nav>
+<main class="max-w-6xl mx-auto px-6 py-12">
+<!-- Hero Section / About Me -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-24">
+<div class="md:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-wood-light/20 text-wood-medium text-sm font-medium mb-6">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-wood-medium opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-wood-medium"></span>
+</span>
+                    在线探索中...
+                </div>
+<h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    欢迎来到我的<br/><span class="text-wood-medium cabin-title">暖木空间</span>
+</h1>
+<p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-xl">
+                    我是 Regina，一名热爱生活的创作者。这里是我存放灵魂碎片的数字小屋，记录着关于音乐剧、技术探索、插画练习以及那些在平凡日子里闪光的小瞬间。
+                </p>
+<div class="flex flex-wrap gap-3 mb-10">
+<span class="px-4 py-2 rounded-lg bg-white border border-wood-light text-wood-dark text-sm"># 音乐剧迷</span>
+<span class="px-4 py-2 rounded-lg bg-white border border-wood-light text-wood-dark text-sm"># 前端探索者</span>
+<span class="px-4 py-2 rounded-lg bg-white border border-wood-light text-wood-dark text-sm"># 插画爱好者</span>
+<span class="px-4 py-2 rounded-lg bg-white border border-wood-light text-wood-dark text-sm"># 咖啡深度依赖</span>
+</div>
+<div class="flex items-center gap-4">
+<a class="px-8 py-3 bg-wood-dark text-white rounded-xl font-bold shadow-lg hover:bg-wood-medium transition-all" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/blog.html?render_html=true">阅读随笔</a>
+<a class="px-8 py-3 bg-white text-wood-dark border border-wood-light rounded-xl font-bold hover:bg-gray-50 transition-all" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/guestbook.html?render_html=true">留言板</a>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-2xl rotate-3 bg-wood-light relative z-10">
+<img alt="Regina's Avatar" class="w-full h-full object-cover" src="/agent-py/static/source/images/placeholder.svg"/>
+</div>
+<!-- 装饰元素 -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-wood-medium/20 rounded-full blur-3xl"></div>
+<div class="absolute top-10 -right-10 w-24 h-24 bg-orange-200/30 rounded-full blur-2xl"></div>
+</div>
+</section>
+<!-- 数据展示 -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
+<div class="wood-card p-6 rounded-2xl text-center">
+<div class="text-3xl font-bold text-wood-dark mb-1">128</div>
+<div class="text-sm text-gray-500">博文随笔</div>
+</div>
+<div class="wood-card p-6 rounded-2xl text-center">
+<div class="text-3xl font-bold text-wood-dark mb-1">452</div>
+<div class="text-sm text-gray-500">流光照片</div>
+</div>
+<div class="wood-card p-6 rounded-2xl text-center">
+<div class="text-3xl font-bold text-wood-dark mb-1">56</div>
+<div class="text-sm text-gray-500">收藏书影音</div>
+</div>
+<div class="wood-card p-6 rounded-2xl text-center">
+<div class="text-3xl font-bold text-wood-dark mb-1">2.1k</div>
+<div class="text-sm text-gray-500">小屋访客</div>
+</div>
+</section>
+<!-- 最近更新预览 -->
+<section class="mb-24">
+<div class="flex items-end justify-between mb-10">
+<div>
+<h2 class="text-3xl font-bold mb-2">最近的林间回响</h2>
+<p class="text-gray-500">那些在树洞里说过的悄悄话</p>
+</div>
+<a class="text-wood-medium font-medium flex items-center gap-1 hover:underline" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/blog.html?render_html=true">
+                    查看全部 <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- 博文卡片 -->
+<div class="wood-card rounded-2xl overflow-hidden group">
+<div class="h-48 overflow-hidden">
+<img alt="Post thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://modao.cc/agent-py/media/generated_images/2026-05-11/56a6dd1fed9a44978c76de5e891ec8d4.jpg#desc=Post%20thumbnail"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+<span>2026-05-10</span>
+<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+<span>生活随笔</span>
+</div>
+<h3 class="text-xl font-bold mb-3 line-clamp-2 group-hover:text-wood-medium transition-colors">春日里的第一场音乐剧：台前幕后的感动</h3>
+<p class="text-gray-600 text-sm line-clamp-3 mb-4">
+                            上周末去剧院看了《摇滚学校》，那种纯粹的能量让我在观众席里热泪盈眶。舞台上的孩子每一个都闪闪发光...
+                        </p>
+<div class="flex items-center gap-4 text-xs text-gray-400">
+<span class="flex items-center gap-1"><iconify-icon icon="lucide:eye"></iconify-icon> 234</span>
+<span class="flex items-center gap-1"><iconify-icon icon="lucide:message-square"></iconify-icon> 12</span>
+</div>
+</div>
+</div>
+<!-- 更多卡片... (略，实际代码中会填充) -->
+<div class="wood-card rounded-2xl overflow-hidden group">
+<div class="h-48 overflow-hidden">
+<img alt="Post thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://modao.cc/agent-py/media/generated_images/2026-05-11/56a6dd1fed9a44978c76de5e891ec8d4.jpg#desc=Post%20thumbnail"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+<span>2026-05-08</span>
+<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+<span>技术探索</span>
+</div>
+<h3 class="text-xl font-bold mb-3 line-clamp-2 group-hover:text-wood-medium transition-colors">为什么我决定给博客加上“木屋”滤镜</h3>
+<p class="text-gray-600 text-sm line-clamp-3 mb-4">
+                            在这个追求极简与工业感的时代，我却偏爱原木的温度。关于本站设计风格的思考与演进...
+                        </p>
+<div class="flex items-center gap-4 text-xs text-gray-400">
+<span class="flex items-center gap-1"><iconify-icon icon="lucide:eye"></iconify-icon> 189</span>
+<span class="flex items-center gap-1"><iconify-icon icon="lucide:message-square"></iconify-icon> 8</span>
+</div>
+</div>
+</div>
+<div class="wood-card rounded-2xl overflow-hidden group">
+<div class="h-48 overflow-hidden">
+<img alt="Post thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://modao.cc/agent-py/media/generated_images/2026-05-11/56a6dd1fed9a44978c76de5e891ec8d4.jpg#desc=Post%20thumbnail"/>
+</div>
+<div class="p-6">
+<div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+<span>2026-05-05</span>
+<span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+<span>插画练习</span>
+</div>
+<h3 class="text-xl font-bold mb-3 line-clamp-2 group-hover:text-wood-medium transition-colors">五月的第一支水彩笔：窗外的蓝调</h3>
+<p class="text-gray-600 text-sm line-clamp-3 mb-4">
+                            今天雨下得很大，哪儿也去不了。于是铺开画纸，画了一张雨中的窗台。蓝色的水墨晕染开来...
+                        </p>
+<div class="flex items-center gap-4 text-xs text-gray-400">
+<span class="flex items-center gap-1"><iconify-icon icon="lucide:eye"></iconify-icon> 156</span>
+<span class="flex items-center gap-1"><iconify-icon icon="lucide:message-square"></iconify-icon> 24</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 时光相册预览 -->
+<section class="mb-24">
+<div class="flex items-end justify-between mb-10">
+<div>
+<h2 class="text-3xl font-bold mb-2">流光碎片</h2>
+<p class="text-gray-500">快门留下的永恒一瞬</p>
+</div>
+<a class="text-wood-medium font-medium flex items-center gap-1 hover:underline" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/gallery.html?render_html=true">
+                    查看相册 <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+<img alt="Photo" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="/agent-py/static/source/images/placeholder.svg"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+<img alt="Photo" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="/agent-py/static/source/images/placeholder.svg"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+<img alt="Photo" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="/agent-py/static/source/images/placeholder.svg"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+<img alt="Photo" class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" src="/agent-py/static/source/images/placeholder.svg"/>
+</div>
+</div>
+</section>
+</main>
+<!-- 页脚 -->
+<footer class="bg-wood-dark text-white/80 py-16">
+<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div>
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-white/20 rounded flex items-center justify-center text-white">
+<iconify-icon icon="lucide:home" width="18"></iconify-icon>
+</div>
+<span class="cabin-title text-xl font-bold tracking-wider text-white">Regina的小屋</span>
+</div>
+<p class="text-sm leading-relaxed mb-6">
+                    在这里，每一个字都是一个树洞，每一个像素都是一段时光。感谢你在这个数字时代偶然踏入这片小森林。
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all text-white" href="#">
+<iconify-icon icon="lucide:github" width="20"></iconify-icon>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all text-white" href="#">
+<iconify-icon icon="lucide:twitter" width="20"></iconify-icon>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all text-white" href="#">
+<iconify-icon icon="lucide:instagram" width="20"></iconify-icon>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all text-white" href="#">
+<iconify-icon icon="lucide:mail" width="20"></iconify-icon>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">快速导航</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-white transition-colors" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/index.html?render_html=true">回到首页</a></li>
+<li><a class="hover:text-white transition-colors" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/blog.html?render_html=true">随笔林间</a></li>
+<li><a class="hover:text-white transition-colors" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/gallery.html?render_html=true">流光碎影</a></li>
+<li><a class="hover:text-white transition-colors" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/collection.html?render_html=true">灵魂角落</a></li>
+<li><a class="hover:text-white transition-colors" href="https://modao.cc/agent-py/workspace/6a01bf6a283ffd8ca55d369d/regina个人小屋.html/guestbook.html?render_html=true">暖心寄语</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">小屋状态</h4>
+<div class="space-y-4 text-sm">
+<p class="flex items-center gap-2">
+<iconify-icon class="text-wood-light" icon="lucide:clock"></iconify-icon>
+                        已稳定运行 1,024 天
+                    </p>
+<p class="flex items-center gap-2">
+<iconify-icon class="text-wood-light" icon="lucide:map-pin"></iconify-icon>
+                        位于：数字世界的某个温暖角落
+                    </p>
+<p class="flex items-center gap-2">
+<iconify-icon class="text-wood-light" icon="lucide:calendar"></iconify-icon>
+                        最后更新：2026年05月11日
+                    </p>
+</div>
+</div>
+</div>
+<div class="max-w-6xl mx-auto px-6 pt-12 mt-12 border-t border-white/10 text-center text-xs">
+<p>© 2026 Regina's Cabin. Built with Love &amp; Wood Texture. All Rights Reserved.</p>
+</div>
+</footer>
+</body>
+</html>

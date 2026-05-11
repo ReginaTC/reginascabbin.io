@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regina的小屋 | 漫画客厅主页</title>
+    <meta
+      name="description"
+      content="一个把随笔、相册、收藏与寄语都融进客厅物件里的漫画风个人主页。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Serif+SC:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <span class="sun-patch"></span>
+      <span class="grain grain-one"></span>
+      <span class="grain grain-two"></span>
+    </div>
+
+    <section class="entry-screen" id="entry" aria-labelledby="entry-title">
+      <div class="pixel-stars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="entry-copy">
+        <p class="pixel-kicker">PRESS THE DOOR</p>
+        <h1 id="entry-title">欢迎来到<br />Regina 的客厅小屋</h1>
+        <p>点木门进屋。</p>
+      </div>
+
+      <div class="pixel-yard" aria-label="Regina 的小屋门口">
+        <div class="pixel-chime" aria-hidden="true">
+          <span class="chime-line"></span>
+          <span class="chime-bell bell-one"></span>
+          <span class="chime-bell bell-two"></span>
+          <span class="chime-tag"></span>
+        </div>
+        <button class="pixel-door" type="button" data-enter-door aria-label="进入 Regina 的小屋">
+          <span class="door-sign">欢迎回家</span>
+          <span class="door-window"></span>
+          <span class="door-knob"></span>
+          <span class="door-shadow"></span>
+        </button>
+        <div class="pixel-cat" aria-label="门口的小橘猫" role="img">
+          <span class="cat-tail"></span>
+          <span class="cat-body"></span>
+          <span class="cat-head"></span>
+        </div>
+        <div class="pixel-ground" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <header class="site-header" id="home">
+      <div class="header-back">
+        <button class="nav-icon-button return-door" type="button" data-return-door aria-label="回到开门页">
+          <svg viewBox="0 0 72 48" aria-hidden="true">
+            <path
+              d="M25 8 8 24l17 16v-9c18 0 28 4 38 13-2-15-11-28-38-28z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="#living-room" aria-current="page">首页</a>
+        <a href="./content/ideas/index.html">随笔林间</a>
+        <a href="./content/diary/index.html">流光碎影</a>
+        <a href="./content/work/index.html">灵魂角落</a>
+        <a href="./content/guestbook/index.html">暖心寄语</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="nav-icon-button write-link" href="mailto:hello@example.com" aria-label="联系我">
+          <svg viewBox="0 0 64 48" aria-hidden="true">
+            <rect x="4" y="4" width="56" height="40" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.4" />
+            <path d="M6 8 32 28 58 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="living-room-home reveal" id="living-room" aria-label="客厅首页">
+        <div class="comic-room" aria-label="可点击的客厅场景背景图">
+          <a
+            class="scene-object hotspot doorway"
+            id="doorway"
+            href="./content/ideas/index.html"
+            aria-label="进入随笔林间"
+            title="随笔林间"
+          ></a>
+          <a
+            class="scene-object hotspot bookshelf"
+            id="bookshelf"
+            href="./content/work/index.html"
+            aria-label="打开书架与唱片收藏"
+            title="书架与唱片"
+          ></a>
+          <a
+            class="scene-object hotspot message-board"
+            id="message-board"
+            href="./content/guestbook/index.html"
+            aria-label="打开暖心寄语"
+            title="暖心寄语"
+          ></a>
+          <a
+            class="scene-object hotspot photo-wall"
+            id="photo-wall"
+            href="./content/diary/index.html"
+            aria-label="打开流光碎影"
+            title="流光碎影"
+          ></a>
+          <a
+            class="scene-object hotspot record-player"
+            id="record-player"
+            href="./content/work/index.html"
+            aria-label="打开灵魂角落"
+            title="灵魂角落"
+          ></a>
+          <a
+            class="scene-object hotspot tv-screen"
+            id="tv-corner"
+            href="./content/ideas/index.html"
+            aria-label="打开随笔林间"
+            title="随笔林间"
+          ></a>
+          <a
+            class="scene-object hotspot coffee-cabinet"
+            id="coffee-corner"
+            href="./content/guestbook/index.html"
+            aria-label="打开暖心寄语"
+            title="咖啡角"
+          ></a>
+          <a
+            class="scene-object hotspot coffee-table"
+            id="table-diary"
+            href="./content/work/index.html"
+            aria-label="打开灵魂角落"
+            title="茶几手账"
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Regina 的客厅小屋</strong>
+        <p>生活住进同一个空间里。</p>
+      </div>
+      <nav aria-label="页脚链接">
+        <a href="#home">回到顶部</a>
+        <a href="./content/ideas/index.html">随笔林间</a>
+        <a href="mailto:hello@example.com">联系我</a>
+      </nav>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

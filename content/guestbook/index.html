@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>暖心寄语 | Regina 的客厅小屋</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Serif+SC:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body class="hut-entered subpage">
+    <div class="ambient" aria-hidden="true">
+      <span class="sun-patch"></span>
+      <span class="grain grain-one"></span>
+      <span class="grain grain-two"></span>
+    </div>
+
+    <header class="site-header">
+      <div class="header-back">
+        <a class="nav-icon-button" href="../../index.html#entry" aria-label="回到开门页">
+          <svg viewBox="0 0 72 48" aria-hidden="true">
+            <path
+              d="M25 8 8 24l17 16v-9c18 0 28 4 38 13-2-15-11-28-38-28z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../../index.html#living-room">首页</a>
+        <a href="../ideas/index.html">随笔林间</a>
+        <a href="../diary/index.html">流光碎影</a>
+        <a href="../work/index.html">灵魂角落</a>
+        <a href="./index.html" aria-current="page">暖心寄语</a>
+      </nav>
+      <div class="header-actions">
+        <a class="nav-icon-button write-link" href="mailto:hello@example.com" aria-label="联系我">
+          <svg viewBox="0 0 64 48" aria-hidden="true">
+            <rect x="4" y="4" width="56" height="40" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.4" />
+            <path d="M6 8 32 28 58 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="subpage-shell">
+        <section class="guestbook-wall">
+          <aside class="guestbook-left">
+            <p>留一句话，给下一位路过的人。</p>
+            <form class="guestbook-form" onsubmit="return false;">
+              <label>
+                署名
+                <input type="text" placeholder="怎么称呼你" />
+              </label>
+              <label>
+                留言
+                <textarea placeholder="写一句你想留下的话。"></textarea>
+              </label>
+              <button type="button">发送</button>
+            </form>
+          </aside>
+
+          <article class="guestbook-right">
+            <div class="section-head">
+              <div>
+                <p class="section-eyebrow">MESSAGE FEED</p>
+                <h2>暖心寄语</h2>
+              </div>
+            </div>
+            <div class="guestbook-marquee" id="guestbook-marquee">
+              <div class="guestbook-track" id="guestbook-track">
+                <article class="message-card">
+                  <div class="message-meta"><span>过路的朋友</span><span>今天</span></div>
+                  <blockquote>这里看起来很适合傍晚来坐坐。</blockquote>
+                </article>
+                <article class="message-card">
+                  <div class="message-meta"><span>未来的 Regina</span><span>昨天</span></div>
+                  <blockquote>记得继续写，不用每篇都完整。</blockquote>
+                </article>
+                <article class="message-card">
+                  <div class="message-meta"><span>雨天读者</span><span>上周</span></div>
+                  <blockquote>客厅里的光很暖，文字也很暖。</blockquote>
+                </article>
+                <article class="message-card">
+                  <div class="message-meta"><span>匿名来访</span><span>上周</span></div>
+                  <blockquote>如果哪天更新慢一点，也没关系，我们会等。</blockquote>
+                </article>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Regina 的客厅小屋</strong>
+        <p>把路过时想留下的话，好好放在门口。</p>
+      </div>
+      <nav aria-label="页脚链接">
+        <a href="../../index.html">首页</a>
+        <a href="../ideas/index.html">随笔林间</a>
+        <a href="../diary/index.html">流光碎影</a>
+      </nav>
+    </footer>
+    <script src="./guestbook-loop.js"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>随笔林间 | Regina 的客厅小屋</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&family=LXGW+WenKai+TC:wght@400;700&family=Noto+Serif+SC:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body class="hut-entered subpage">
+    <div class="ambient" aria-hidden="true">
+      <span class="sun-patch"></span>
+      <span class="grain grain-one"></span>
+      <span class="grain grain-two"></span>
+    </div>
+
+    <header class="site-header" id="home">
+      <div class="header-back">
+        <a class="nav-icon-button" href="../../index.html#entry" aria-label="回到开门页">
+          <svg viewBox="0 0 72 48" aria-hidden="true">
+            <path
+              d="M25 8 8 24l17 16v-9c18 0 28 4 38 13-2-15-11-28-38-28z"
+              fill="currentColor"
+            />
+          </svg>
+        </a>
+      </div>
+      <nav class="nav" aria-label="主导航">
+        <a href="../../index.html#living-room">首页</a>
+        <a href="./index.html" aria-current="page">随笔林间</a>
+        <a href="../diary/index.html">流光碎影</a>
+        <a href="../work/index.html">灵魂角落</a>
+        <a href="../guestbook/index.html">暖心寄语</a>
+      </nav>
+      <div class="header-actions">
+        <a class="nav-icon-button write-link" href="mailto:hello@example.com" aria-label="联系我">
+          <svg viewBox="0 0 64 48" aria-hidden="true">
+            <rect x="4" y="4" width="56" height="40" rx="1.5" fill="none" stroke="currentColor" stroke-width="2.4" />
+            <path d="M6 8 32 28 58 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="subpage-shell">
+        <section class="page-grid">
+          <article class="section-panel">
+            <div class="section-head">
+              <div>
+                <p class="section-eyebrow">LATEST POSTS</p>
+                <h2>随笔列表</h2>
+              </div>
+              <span class="section-note" id="ideas-result-count"></span>
+            </div>
+            <div class="ideas-tools">
+              <label class="ideas-search">
+                <span>搜索</span>
+                <input id="ideas-search-input" type="search" placeholder="标题 / 摘要 / 标签" />
+              </label>
+            </div>
+            <div class="article-list" id="ideas-list"></div>
+            <div class="ideas-pagination" id="ideas-pagination">
+              <button type="button" id="ideas-prev">上一页</button>
+              <div id="ideas-page-buttons" class="ideas-page-buttons"></div>
+              <button type="button" id="ideas-next">下一页</button>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Regina 的客厅小屋</strong>
+        <p>把写下来的东西整齐收进同一个书架。</p>
+      </div>
+      <nav aria-label="页脚链接">
+        <a href="../../index.html">首页</a>
+        <a href="../diary/index.html">流光碎影</a>
+        <a href="../guestbook/index.html">暖心寄语</a>
+      </nav>
+    </footer>
+    <script src="./posts-data.js"></script>
+    <script src="./ideas-list.js"></script>
+  </body>
+</html>

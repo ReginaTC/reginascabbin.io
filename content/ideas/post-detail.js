@@ -36,12 +36,14 @@
         <h1 class="full-post-title">${post.title}</h1>
       </div>
     </div>
-    <div class="article-meta">
-      <span>${post.date}</span>
-      <span>${post.category}</span>
+    <div class="full-post-body">
+      <div class="article-meta">
+        <span>${post.date}</span>
+        <span>${post.category}</span>
+      </div>
+      <div class="card-tags">${tags}</div>
+      <div class="full-post-content">${paragraphs}</div>
+      <p><a class="text-link" href="./index.html">返回随笔列表</a></p>
     </div>
-    <div class="card-tags">${tags}</div>
-    <div class="full-post-content">${paragraphs}</div>
-    <p><a class="text-link" href="./index.html">返回随笔列表</a></p>
   `;
 })();

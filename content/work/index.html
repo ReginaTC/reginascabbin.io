@@ -50,77 +50,166 @@
     <main>
       <div class="subpage-shell">
         <section class="section-panel">
-          <div class="section-head">
-            <div>
-              <p class="section-eyebrow">SOUL ZONES</p>
-              <h2>灵魂角落分区</h2>
-            </div>
-          </div>
           <div class="zone-list">
             <article class="zone-card">
               <div class="zone-head">
-                <strong>影音区</strong>
                 <h3>唱片架</h3>
               </div>
-              <div class="display rack-display" aria-hidden="true">
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
-                <span class="cover-slot"></span>
+              <div class="display rack-display">
+                <div class="rack-track">
+                  <button class="record-trigger" type="button" data-record-open aria-label="查看黄伟文作品展 4DVD 详情">
+                    <img
+                      class="record-cover record-cover--wyman"
+                      src="./wyman-cover-cropped.png"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </button>
+                  <button class="record-trigger" type="button" data-record-open="record-modal-eason" aria-label="查看陈奕迅 Fear and Dreams Live 2Bluray 详情">
+                    <img
+                      class="record-cover record-cover--eason"
+                      src="./eason-fear-dreams-cropped.png"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </button>
+                  <span class="record-placeholder" style="--w: 74px; --h: 112px;"></span>
+                  <span class="record-placeholder" style="--w: 66px; --h: 108px;"></span>
+                  <span class="record-placeholder" style="--w: 82px; --h: 118px;"></span>
+                  <span class="record-placeholder" style="--w: 70px; --h: 104px;"></span>
+                  <span class="record-placeholder" style="--w: 76px; --h: 110px;"></span>
+                  <span class="record-placeholder" style="--w: 68px; --h: 114px;"></span>
+                </div>
+                <span class="rack-bar"></span>
               </div>
             </article>
 
             <article class="zone-card">
               <div class="zone-head">
-                <strong>书画区</strong>
                 <h3>书架</h3>
               </div>
-              <div class="display bookshelf-display" aria-hidden="true">
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
-                <span class="book-slot"></span>
+              <div class="display bookshelf-display">
+                <div class="bookshelf-track">
+                  <button class="record-trigger" type="button" data-record-open="book-modal-siddhartha" aria-label="查看书籍详情：悉达多（果麦经典）">
+                    <img
+                      class="book-cover"
+                      src="./book-cover-siddhartha.jpg"
+                      alt=""
+                      loading="lazy"
+                    />
+                  </button>
+                  <span class="book-placeholder" style="--w: 62px; --h: 118px;"></span>
+                  <span class="book-placeholder" style="--w: 56px; --h: 110px;"></span>
+                  <span class="book-placeholder" style="--w: 68px; --h: 126px;"></span>
+                  <span class="book-placeholder" style="--w: 60px; --h: 114px;"></span>
+                  <span class="book-placeholder" style="--w: 52px; --h: 106px;"></span>
+                </div>
+                <span class="bookshelf-bar"></span>
               </div>
             </article>
 
             <article class="zone-card coffee-zone">
               <div class="zone-head">
-                <strong>咖啡区</strong>
-                <h3>意式咖啡机</h3>
+                <h3>咖啡角</h3>
               </div>
-              <div class="display espresso-display" aria-hidden="true">
-                <span class="espresso-top"></span>
-                <span class="espresso-body"></span>
-                <span class="espresso-portafilter"></span>
-              </div>
-              <div class="recipe-cards">
-                <article>
-                  <h4>配方 01</h4>
-                </article>
-                <article>
-                  <h4>配方 02</h4>
-                </article>
-                <article>
-                  <h4>配方 03</h4>
-                </article>
+              <div class="coffee-showcase">
+                <div class="coffee-machine-wrap">
+                  <img class="coffee-machine-image" src="./coffee-machine-transparent.png" alt="" loading="lazy" />
+                </div>
+                <div class="coffee-shelf-stack">
+                  <div class="coffee-shelf-row">
+                    <button class="coffee-cup-trigger coffee-cup-slot" type="button" data-record-open="coffee-modal-1" aria-label="查看咖啡杯 01 详情">
+                      杯子 01
+                    </button>
+                    <span class="coffee-shelf-bar"></span>
+                  </div>
+                  <div class="coffee-shelf-row">
+                    <button class="coffee-cup-trigger coffee-cup-slot" type="button" data-record-open="coffee-modal-2" aria-label="查看咖啡杯 02 详情">
+                      杯子 02
+                    </button>
+                    <span class="coffee-shelf-bar"></span>
+                  </div>
+                  <div class="coffee-shelf-row">
+                    <button class="coffee-cup-trigger coffee-cup-slot" type="button" data-record-open="coffee-modal-3" aria-label="查看咖啡杯 03 详情">
+                      杯子 03
+                    </button>
+                    <span class="coffee-shelf-bar"></span>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
         </section>
+
+        <dialog class="record-modal" id="record-modal">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">DISC DETAIL</p>
+            <h3>黃偉文 Wyman Wong - 黃偉文作品展 演唱會 4DVD</h3>
+            <p><strong>編號：</strong>YY001</p>
+            <p><strong>價格：</strong>HK$499.00</p>
+            <p><strong>內容：</strong>4DVD 共 84 首歌，總長約 6 小時 21 分鐘。</p>
+            <p><strong>商品頁：</strong><a href="https://www.cdwarehouse.com.hk/products/%E9%BB%83%E5%81%89%E6%96%87-wyman-wong-%E9%BB%83%E5%81%89%E6%96%87%E4%BD%9C%E5%93%81%E5%B1%95-%E6%BC%94%E5%94%B1%E6%9C%83-4dvd" target="_blank" rel="noopener noreferrer">查看完整詳情</a></p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="record-modal-eason">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">DISC DETAIL</p>
+            <h3>陳奕迅 Eason Chan - Fear and Dreams Live (2Bluray)</h3>
+            <p><strong>編號：</strong>68830d43114225000ebc9a1b</p>
+            <p><strong>價格：</strong>HK$469.00</p>
+            <p><strong>內容：</strong>2Bluray，收錄 FEAR and DREAMS 巡演完整現場曲目與內容。</p>
+            <p><strong>商品頁：</strong><a href="https://www.cdwarehouse.com.hk/products/%E6%96%B0%E8%B2%A8%E9%A0%90%E8%B3%BC-%E9%99%B3%E5%A5%95%E8%BF%85-eason-chan-fear-and-dreams-2bluray" target="_blank" rel="noopener noreferrer">查看完整詳情</a></p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="book-modal-siddhartha">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">BOOK DETAIL</p>
+            <h3>悉达多（果麦经典）</h3>
+            <p><strong>作者：</strong>[德] 赫尔曼·黑塞</p>
+            <p><strong>推荐值：</strong>90.2%</p>
+            <p><strong>阅读人数：</strong>135.7 万人</p>
+            <p><strong>字数：</strong>约 5.6 万字</p>
+            <p><strong>详情页：</strong><a href="https://weread.qq.com/web/reader/3a832f705d0d1f3a8ec72ff" target="_blank" rel="noopener noreferrer">查看完整详情</a></p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="coffee-modal-1">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">COFFEE DETAIL</p>
+            <h3>杯子 01</h3>
+            <p><strong>名称：</strong>待命名</p>
+            <p><strong>豆子：</strong>待填写</p>
+            <p><strong>风味：</strong>待填写</p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="coffee-modal-2">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">COFFEE DETAIL</p>
+            <h3>杯子 02</h3>
+            <p><strong>名称：</strong>待命名</p>
+            <p><strong>豆子：</strong>待填写</p>
+            <p><strong>风味：</strong>待填写</p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="coffee-modal-3">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">COFFEE DETAIL</p>
+            <h3>杯子 03</h3>
+            <p><strong>名称：</strong>待命名</p>
+            <p><strong>豆子：</strong>待填写</p>
+            <p><strong>风味：</strong>待填写</p>
+          </article>
+        </dialog>
       </div>
     </main>
 
@@ -135,5 +224,6 @@
         <a href="../guestbook/index.html">暖心寄语</a>
       </nav>
     </footer>
+    <script src="./record-modal.js"></script>
   </body>
 </html>

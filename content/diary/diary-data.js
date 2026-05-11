@@ -1,14 +1,11 @@
 window.DIARY_PHOTOS = [
-  { title: "雨天窗台", date: "2026-05-11", note: "下午三点的蓝色" },
-  { title: "剧院灯光", date: "2026-05-10", note: "谢幕前的暖金色" },
-  { title: "咖啡手账", date: "2026-05-09", note: "桌面上的安静时刻" },
-  { title: "傍晚散步", date: "2026-05-08", note: "风很轻的街道" },
-  { title: "山路日光", date: "2026-05-06", note: "旅途里的明亮空隙" },
-  { title: "列车小憩", date: "2026-05-04", note: "窗边短暂停靠" },
-  { title: "夜市转角", date: "2026-05-02", note: "人群里的橘色灯牌" },
-  { title: "晨雾公园", date: "2026-04-30", note: "跑道和薄雾一起醒来" },
-  { title: "旧书摊位", date: "2026-04-27", note: "纸页翻动的细小声音" },
-  { title: "海边木栈道", date: "2026-04-24", note: "风把云推得很快" },
-  { title: "午后阳台", date: "2026-04-21", note: "晾衣绳上的光点" },
-  { title: "回家路灯", date: "2026-04-18", note: "雨后地面的倒影" }
+  { title: "照片 1", date: "2026-05-12", note: "", image: "./pictures/1.jpg" },
+  { title: "照片 2", date: "2026-05-11", note: "", image: "./pictures/2.jpg" },
+  { title: "照片 3", date: "2026-05-10", note: "", image: "./pictures/3.jpg" },
+  { title: "照片 4", date: "2026-05-09", note: "", image: "./pictures/4.jpg" },
+  { title: "照片 5", date: "2026-05-08", note: "", image: "./pictures/5.jpg" },
+  { title: "照片 6", date: "2026-05-07", note: "", image: "./pictures/6.jpg" },
+  { title: "照片 7", date: "2026-05-06", note: "", image: "./pictures/7.jpg" },
+  { title: "照片 8", date: "2026-05-05", note: "", image: "./pictures/8.jpg" },
+  { title: "照片 9", date: "2026-05-04", note: "", image: "./pictures/9.jpg" }
 ];

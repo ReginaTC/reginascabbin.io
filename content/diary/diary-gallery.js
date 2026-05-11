@@ -43,12 +43,16 @@
   function renderGrid(items) {
     gridEl.innerHTML = items
       .map((item) => {
+        const visual = item.image
+          ? `<img class="media-visual-image" src="${item.image}" alt="${item.title}" loading="lazy" />`
+          : `<div class="media-visual"></div>`;
+        const detail = item.note ? `${item.date} · ${item.note}` : item.date;
         return `
           <figure class="media-card">
-            <div class="media-visual"></div>
+            ${visual}
             <figcaption class="media-copy">
               <strong>${item.title}</strong>
-              <span>${item.date} · ${item.note}</span>
+              <span>${detail}</span>
             </figcaption>
           </figure>
         `;

@@ -1205,8 +1205,9 @@ body.subpage .zone-card {
 .media-visual-image {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  background: rgba(255, 249, 239, 0.66);
 }
 
 .media-card:nth-child(2) .media-visual,

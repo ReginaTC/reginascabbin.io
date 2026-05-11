@@ -1,4 +1,9 @@
 (function () {
+  const currentScript = document.currentScript;
+  const assetBaseUrl = currentScript
+    ? new URL(".", currentScript.src)
+    : new URL("./", window.location.href);
+
   const photos = Array.isArray(window.DIARY_PHOTOS) ? window.DIARY_PHOTOS.slice() : [];
   const gridEl = document.querySelector("#diary-media-grid");
   const prevBtn = document.querySelector("#diary-prev");
@@ -43,8 +48,9 @@
   function renderGrid(items) {
     gridEl.innerHTML = items
       .map((item) => {
+        const imageUrl = item.image ? new URL(item.image, assetBaseUrl).href : "";
         const visual = item.image
-          ? `<img class="media-visual-image" src="${item.image}" alt="${item.title}" loading="lazy" />`
+          ? `<img class="media-visual-image" src="${imageUrl}" alt="${item.title}" loading="lazy" />`
           : `<div class="media-visual"></div>`;
         const detail = item.note ? `${item.date} · ${item.note}` : item.date;
         return `

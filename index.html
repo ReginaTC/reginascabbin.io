@@ -37,19 +37,13 @@
 
       <div class="pixel-yard" aria-label="Regina 的小屋门口">
         <div class="pixel-chime" aria-hidden="true">
-          <span class="chime-line"></span>
-          <span class="chime-bell bell-one"></span>
-          <span class="chime-bell bell-two"></span>
-          <span class="chime-tag"></span>
+          <img class="pixel-chime-image" src="./windbell-cutout.png" alt="" loading="lazy" />
         </div>
         <button class="pixel-door" type="button" data-enter-door aria-label="进入 Regina 的小屋">
-          <span class="door-sign">欢迎回家</span>
-          <span class="door-window"></span>
-          <span class="door-knob"></span>
-          <span class="door-shadow"></span>
+          <img class="pixel-door-image" src="./door-cutout.png" alt="" loading="lazy" />
         </button>
         <div class="pixel-cat" aria-label="门口的小橘猫" role="img">
-          <img class="pixel-cat-image" src="./cat-cutout.png" alt="" loading="lazy" />
+          <img class="pixel-cat-image" src="./cat-entry-cutout.png" alt="" loading="lazy" />
         </div>
         <div class="pixel-ground" aria-hidden="true"></div>
       </div>
@@ -87,19 +81,38 @@
     <main>
       <section class="living-room-home reveal" id="living-room" aria-label="客厅首页">
         <div class="comic-room" aria-label="可点击的客厅场景背景图">
+          <div class="scene-object shelf-cluster" aria-hidden="true">
+            <div class="shelf-row">
+              <span class="shelf-cover"></span>
+              <span class="shelf-cover"></span>
+              <span class="shelf-cover"></span>
+            </div>
+            <div class="shelf-row">
+              <span class="shelf-cover"></span>
+              <span class="shelf-cover"></span>
+              <span class="shelf-cover"></span>
+            </div>
+          </div>
+          <p class="scene-object board-handwrite" aria-hidden="true">常为碎事<br />而庆祝</p>
+          <div class="scene-object photo-board-grid" aria-hidden="true">
+            <span class="photo-board-card"></span>
+            <span class="photo-board-card"></span>
+            <span class="photo-board-card"></span>
+            <span class="photo-board-card"></span>
+          </div>
           <a
             class="scene-object hotspot doorway"
             id="doorway"
-            href="./content/ideas/index.html"
-            aria-label="进入随笔林间"
-            title="随笔林间"
+            href="./index.html#entry"
+            aria-label="回到开门页"
+            title="回到开门页"
           ></a>
           <a
             class="scene-object hotspot bookshelf"
             id="bookshelf"
-            href="./content/work/index.html"
-            aria-label="打开书架与唱片收藏"
-            title="书架与唱片"
+            href="./content/work/index.html#record-rack"
+            aria-label="打开灵魂角落唱片架"
+            title="唱片架"
           ></a>
           <a
             class="scene-object hotspot message-board"
@@ -116,32 +129,18 @@
             title="流光碎影"
           ></a>
           <a
-            class="scene-object hotspot record-player"
-            id="record-player"
-            href="./content/work/index.html"
-            aria-label="打开灵魂角落"
-            title="灵魂角落"
+            class="scene-object hotspot book-cabinet"
+            id="book-cabinet"
+            href="./content/work/index.html#book-shelf"
+            aria-label="打开灵魂角落书架"
+            title="书架"
           ></a>
           <a
-            class="scene-object hotspot tv-screen"
-            id="tv-corner"
+            class="scene-object hotspot notebook-spot"
+            id="table-notebook"
             href="./content/ideas/index.html"
             aria-label="打开随笔林间"
             title="随笔林间"
-          ></a>
-          <a
-            class="scene-object hotspot coffee-cabinet"
-            id="coffee-corner"
-            href="./content/guestbook/index.html"
-            aria-label="打开暖心寄语"
-            title="咖啡角"
-          ></a>
-          <a
-            class="scene-object hotspot coffee-table"
-            id="table-diary"
-            href="./content/work/index.html"
-            aria-label="打开灵魂角落"
-            title="茶几手账"
           ></a>
         </div>
       </section>

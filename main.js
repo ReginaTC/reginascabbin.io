@@ -66,6 +66,7 @@ if (returnDoor && entryDoor) {
 }
 
 syncHashState();
+window.addEventListener("hashchange", syncHashState);
 
 const observer = new IntersectionObserver(
   (entries) => {

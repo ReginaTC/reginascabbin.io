@@ -5,91 +5,187 @@
     : new URL("./", window.location.href);
 
   const photos = Array.isArray(window.DIARY_PHOTOS) ? window.DIARY_PHOTOS.slice() : [];
-  const gridEl = document.querySelector("#diary-media-grid");
-  const prevBtn = document.querySelector("#diary-prev");
-  const nextBtn = document.querySelector("#diary-next");
-  const pageButtonsEl = document.querySelector("#diary-page-buttons");
+  const trackEl = document.querySelector("#diary-film-track");
+  const marqueeEl = document.querySelector("#diary-film-marquee");
   const resultCountEl = document.querySelector("#diary-result-count");
+  const instaxGridEl = document.querySelector(".instax-grid");
 
-  if (!gridEl || !prevBtn || !nextBtn || !pageButtonsEl || !resultCountEl) {
-    return;
-  }
-
-  const pageSize = 9;
-  let currentPage = 1;
-  const sorted = photos.sort((a, b) => String(b.date).localeCompare(String(a.date)));
-
-  function totalPages() {
-    return Math.max(1, Math.ceil(sorted.length / pageSize));
-  }
-
-  function renderPageButtons(total) {
-    pageButtonsEl.innerHTML = "";
-    if (total <= 1) {
+  function initInstaxModal() {
+    if (!instaxGridEl) {
       return;
     }
 
-    for (let page = 1; page <= total; page += 1) {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.textContent = String(page);
-      btn.className = "gallery-page-btn";
-      if (page === currentPage) {
-        btn.setAttribute("aria-current", "page");
+    const modal = document.createElement("dialog");
+    modal.className = "film-modal instax-modal";
+    modal.innerHTML = `
+      <article class="film-modal-card">
+        <button class="film-modal-close" type="button" data-instax-close aria-label="关闭详情">×</button>
+        <h3 class="instax-modal-title" id="instax-modal-title"></h3>
+        <img class="film-modal-image" src="" alt="" />
+        <p class="film-modal-desc" id="instax-modal-desc"></p>
+      </article>
+    `;
+    instaxGridEl.after(modal);
+
+    const modalImageEl = modal.querySelector(".film-modal-image");
+    const modalDescEl = modal.querySelector("#instax-modal-desc");
+    const modalTitleEl = modal.querySelector("#instax-modal-title");
+    const modalCloseBtn = modal.querySelector("[data-instax-close]");
+
+    function openModal(trigger) {
+      if (!modalImageEl || !modalDescEl || !modalTitleEl) {
+        return;
       }
-      btn.addEventListener("click", () => {
-        currentPage = page;
-        render();
-      });
-      pageButtonsEl.appendChild(btn);
+      const title = trigger.getAttribute("data-instax-title") || "拍立得";
+      const desc = trigger.getAttribute("data-instax-desc") || "暂无描述";
+      const image = trigger.getAttribute("data-instax-image") || "";
+      const imageUrl = image ? new URL(image, assetBaseUrl).href : "";
+
+      modalTitleEl.textContent = title;
+      modalImageEl.src = imageUrl;
+      modalImageEl.alt = title;
+      modalDescEl.textContent = desc;
+      modal.showModal();
     }
+
+    instaxGridEl.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) {
+        return;
+      }
+      const trigger = target.closest("[data-instax-open]");
+      if (!(trigger instanceof HTMLElement)) {
+        return;
+      }
+      openModal(trigger);
+    });
+
+    if (modalCloseBtn) {
+      modalCloseBtn.addEventListener("click", () => modal.close());
+    }
+
+    modal.addEventListener("click", (event) => {
+      const rect = modal.getBoundingClientRect();
+      const clickedOutside =
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom;
+      if (clickedOutside) {
+        modal.close();
+      }
+    });
   }
 
-  function renderGrid(items) {
-    gridEl.innerHTML = items
-      .map((item) => {
-        const imageUrl = item.image ? new URL(item.image, assetBaseUrl).href : "";
-        const visual = item.image
-          ? `<img class="media-visual-image" src="${imageUrl}" alt="${item.title}" loading="lazy" />`
-          : `<div class="media-visual"></div>`;
-        const detail = item.note ? `${item.date} · ${item.note}` : item.date;
-        return `
-          <figure class="media-card">
-            ${visual}
-            <figcaption class="media-copy">
-              <strong>${item.title}</strong>
-              <span>${detail}</span>
-            </figcaption>
-          </figure>
-        `;
-      })
-      .join("");
+  initInstaxModal();
+
+  if (!trackEl || !marqueeEl || !resultCountEl) {
+    return;
   }
 
-  function render() {
-    const pages = totalPages();
-    currentPage = Math.min(Math.max(1, currentPage), pages);
+  const sorted = photos.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const holeRow = "<span></span><span></span><span></span><span></span><span></span><span></span>";
 
-    const start = (currentPage - 1) * pageSize;
-    const items = sorted.slice(start, start + pageSize);
-
-    renderGrid(items);
-    renderPageButtons(pages);
-
-    prevBtn.disabled = currentPage <= 1;
-    nextBtn.disabled = currentPage >= pages;
-    resultCountEl.textContent = `${sorted.length} 条结果 · 第 ${currentPage} / ${pages} 页`;
+  function escapeHtml(text) {
+    return String(text || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#39;");
   }
 
-  prevBtn.addEventListener("click", () => {
-    currentPage -= 1;
-    render();
+  function cardTemplate(item, index) {
+    const title = escapeHtml(item.title || "未命名");
+    const imageUrl = item.image ? new URL(item.image, assetBaseUrl).href : "";
+    const visual = imageUrl
+      ? `<img class="film-image" src="${imageUrl}" alt="${title}" loading="lazy" />`
+      : `<span class="film-image film-image--empty" aria-hidden="true"></span>`;
+
+    return `
+      <article class="film-frame">
+        <div class="film-hole-row film-hole-row--top" aria-hidden="true">${holeRow}</div>
+        <button class="film-window-btn" type="button" data-film-open="${index}" aria-label="查看照片详情：${title}">
+          <figure class="film-window">${visual}</figure>
+        </button>
+        <div class="film-hole-row film-hole-row--bottom" aria-hidden="true">${holeRow}</div>
+      </article>
+    `;
+  }
+
+  if (!sorted.length) {
+    resultCountEl.textContent = "0 张";
+    marqueeEl.innerHTML = '<p class="ideas-empty">还没有照片。</p>';
+    return;
+  }
+
+  const cards = sorted.map((item, index) => cardTemplate(item, index)).join("");
+  trackEl.innerHTML = `
+    <div class="film-strip">${cards}</div>
+    <div class="film-strip" aria-hidden="true">${cards}</div>
+  `;
+
+  const duration = Math.max(26, sorted.length * 3.6);
+  trackEl.style.setProperty("--film-duration", `${duration}s`);
+  resultCountEl.textContent = `${sorted.length} 张`;
+
+  const modal = document.createElement("dialog");
+  modal.className = "film-modal";
+  modal.innerHTML = `
+    <article class="film-modal-card">
+      <button class="film-modal-close" type="button" data-film-close aria-label="关闭详情">×</button>
+      <img class="film-modal-image" src="" alt="" />
+      <p class="film-modal-desc" id="film-modal-desc"></p>
+    </article>
+  `;
+  marqueeEl.appendChild(modal);
+
+  const modalImageEl = modal.querySelector(".film-modal-image");
+  const modalDescEl = modal.querySelector("#film-modal-desc");
+  const modalCloseBtn = modal.querySelector("[data-film-close]");
+
+  function openModal(index) {
+    const item = sorted[index];
+    if (!item || !modalImageEl || !modalDescEl) {
+      return;
+    }
+    const title = item.title || "未命名";
+    const imageUrl = item.image ? new URL(item.image, assetBaseUrl).href : "";
+    const desc = item.note || "暂无描述";
+    modalImageEl.src = imageUrl;
+    modalImageEl.alt = title;
+    modalDescEl.textContent = desc;
+    modal.showModal();
+  }
+
+  trackEl.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) {
+      return;
+    }
+    const trigger = target.closest("[data-film-open]");
+    if (!trigger) {
+      return;
+    }
+    const index = Number(trigger.getAttribute("data-film-open"));
+    if (!Number.isNaN(index)) {
+      openModal(index);
+    }
   });
 
-  nextBtn.addEventListener("click", () => {
-    currentPage += 1;
-    render();
-  });
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener("click", () => modal.close());
+  }
 
-  render();
+  modal.addEventListener("click", (event) => {
+    const rect = modal.getBoundingClientRect();
+    const clickedOutside =
+      event.clientX < rect.left ||
+      event.clientX > rect.right ||
+      event.clientY < rect.top ||
+      event.clientY > rect.bottom;
+    if (clickedOutside) {
+      modal.close();
+    }
+  });
 })();

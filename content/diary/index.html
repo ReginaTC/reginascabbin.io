@@ -58,19 +58,80 @@
 
     <main>
       <div class="subpage-shell">
-        <section class="section-panel">
+        <section class="section-panel diary-instax-section">
           <div class="section-head">
             <div>
-              <p class="section-eyebrow">GALLERY</p>
-              <h2>相册卡片</h2>
+              <p class="section-eyebrow">INSTAX WALL</p>
+              <h2>拍立得相墙</h2>
+            </div>
+            <span class="section-note">每行 4 张</span>
+          </div>
+          <div class="instax-grid" aria-label="拍立得照片">
+            <figure class="instax-card">
+              <button
+                class="instax-trigger"
+                type="button"
+                data-instax-open
+                data-instax-title="拍立得 1"
+                data-instax-desc="这一张的描述可在 HTML 里改成你的文字。"
+                data-instax-image="./instax/1.jpg"
+                aria-label="查看拍立得详情：拍立得 1"
+              >
+                <img src="./instax/1.jpg" alt="拍立得 1" loading="lazy" class="instax-image" />
+              </button>
+            </figure>
+            <figure class="instax-card">
+              <button
+                class="instax-trigger"
+                type="button"
+                data-instax-open
+                data-instax-title="拍立得 2"
+                data-instax-desc="这一张的描述可在 HTML 里改成你的文字。"
+                data-instax-image="./instax/2.jpg"
+                aria-label="查看拍立得详情：拍立得 2"
+              >
+                <img src="./instax/2.jpg" alt="拍立得 2" loading="lazy" class="instax-image" />
+              </button>
+            </figure>
+            <figure class="instax-card">
+              <button
+                class="instax-trigger"
+                type="button"
+                data-instax-open
+                data-instax-title="拍立得 3"
+                data-instax-desc="这一张的描述可在 HTML 里改成你的文字。"
+                data-instax-image="./instax/3.jpg"
+                aria-label="查看拍立得详情：拍立得 3"
+              >
+                <img src="./instax/3.jpg" alt="拍立得 3" loading="lazy" class="instax-image" />
+              </button>
+            </figure>
+            <figure class="instax-card">
+              <button
+                class="instax-trigger"
+                type="button"
+                data-instax-open
+                data-instax-title="拍立得 4"
+                data-instax-desc="这一张的描述可在 HTML 里改成你的文字。"
+                data-instax-image="./instax/4.jpg"
+                aria-label="查看拍立得详情：拍立得 4"
+              >
+                <img src="./instax/4.jpg" alt="拍立得 4" loading="lazy" class="instax-image" />
+              </button>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section-panel diary-film-section">
+          <div class="section-head">
+            <div>
+              <p class="section-eyebrow">FILM REEL</p>
+              <h2>流光胶卷</h2>
             </div>
             <span class="section-note" id="diary-result-count"></span>
           </div>
-          <div class="media-grid" id="diary-media-grid"></div>
-          <div class="gallery-pagination" id="diary-pagination">
-            <button type="button" id="diary-prev">上一页</button>
-            <div id="diary-page-buttons" class="gallery-page-buttons"></div>
-            <button type="button" id="diary-next">下一页</button>
+          <div class="film-marquee" id="diary-film-marquee">
+            <div class="diary-film-track" id="diary-film-track"></div>
           </div>
         </section>
       </div>

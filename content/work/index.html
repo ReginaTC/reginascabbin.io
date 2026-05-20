@@ -66,28 +66,54 @@
               </div>
               <div class="display rack-display">
                 <div class="rack-track">
-                  <button class="record-trigger" type="button" data-record-open aria-label="查看黄伟文作品展 4DVD 详情">
+                  <button class="record-trigger" type="button" data-record-open="record-modal-chin-up" aria-label="查看 CHIN UP! 专辑详情">
                     <img
-                      class="record-cover record-cover--wyman"
-                      src="./wyman-cover-cropped.png"
-                      alt=""
+                      class="record-cover"
+                      src="https://upload.wikimedia.org/wikipedia/zh/thumb/b/bf/Eason_Chan%27s_CHIN_UP.jpg/250px-Eason_Chan%27s_CHIN_UP.jpg"
+                      alt="CHIN UP! 专辑封面"
                       loading="lazy"
                     />
                   </button>
-                  <button class="record-trigger" type="button" data-record-open="record-modal-eason" aria-label="查看陈奕迅 Fear and Dreams Live 2Bluray 详情">
+                  <button class="record-trigger" type="button" data-record-open="record-modal-taste" aria-label="查看 Taste the Atmosphere 专辑详情">
                     <img
-                      class="record-cover record-cover--eason"
-                      src="./eason-fear-dreams-cropped.png"
-                      alt=""
+                      class="record-cover"
+                      src="https://upload.wikimedia.org/wikipedia/zh/thumb/a/a8/EasonChen_Album_Taste_the_Atmosphere.jpg/250px-EasonChen_Album_Taste_the_Atmosphere.jpg"
+                      alt="Taste the Atmosphere 专辑封面"
                       loading="lazy"
                     />
                   </button>
-                  <span class="record-placeholder" style="--w: 74px; --h: 112px;"></span>
-                  <span class="record-placeholder" style="--w: 66px; --h: 108px;"></span>
-                  <span class="record-placeholder" style="--w: 82px; --h: 118px;"></span>
-                  <span class="record-placeholder" style="--w: 70px; --h: 104px;"></span>
-                  <span class="record-placeholder" style="--w: 76px; --h: 110px;"></span>
-                  <span class="record-placeholder" style="--w: 68px; --h: 114px;"></span>
+                  <button class="record-trigger" type="button" data-record-open="record-modal-stranger" aria-label="查看 Stranger Under My Skin 专辑详情">
+                    <img
+                      class="record-cover"
+                      src="https://upload.wikimedia.org/wikipedia/zh/thumb/1/13/Stranger_under_my_skin.jpg/250px-Stranger_under_my_skin.jpg"
+                      alt="Stranger Under My Skin 专辑封面"
+                      loading="lazy"
+                    />
+                  </button>
+                  <button class="record-trigger" type="button" data-record-open="record-modal-u87" aria-label="查看 U87 专辑详情">
+                    <img
+                      class="record-cover"
+                      src="https://upload.wikimedia.org/wikipedia/zh/thumb/9/93/Easonchan2005U87.jpg/250px-Easonchan2005U87.jpg"
+                      alt="U87 专辑封面"
+                      loading="lazy"
+                    />
+                  </button>
+                  <button class="record-trigger" type="button" data-record-open="record-modal-whats-going-on" aria-label="查看 What's Going On...? 专辑详情">
+                    <img
+                      class="record-cover"
+                      src="https://upload.wikimedia.org/wikipedia/zh/thumb/4/44/2006_What%27s_Going_On_2nd.jpg/250px-2006_What%27s_Going_On_2nd.jpg"
+                      alt="What's Going On...? 专辑封面"
+                      loading="lazy"
+                    />
+                  </button>
+                  <button class="record-trigger" type="button" data-record-open="record-modal-h3m" aria-label="查看 H³M 专辑详情">
+                    <img
+                      class="record-cover"
+                      src="https://upload.wikimedia.org/wikipedia/zh/thumb/f/ff/Easonchan-H3M-cover.jpg/250px-Easonchan-H3M-cover.jpg"
+                      alt="H³M 专辑封面"
+                      loading="lazy"
+                    />
+                  </button>
                 </div>
                 <span class="rack-bar"></span>
               </div>
@@ -150,27 +176,69 @@
           </div>
         </section>
 
-        <dialog class="record-modal" id="record-modal">
+        <dialog class="record-modal" id="record-modal-chin-up">
           <article class="record-modal-card">
             <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
             <p class="section-eyebrow">DISC DETAIL</p>
-            <h3>黃偉文 Wyman Wong - 黃偉文作品展 演唱會 4DVD</h3>
-            <p><strong>編號：</strong>YY001</p>
-            <p><strong>價格：</strong>HK$499.00</p>
-            <p><strong>內容：</strong>4DVD 共 84 首歌，總長約 6 小時 21 分鐘。</p>
-            <p><strong>商品頁：</strong><a href="https://www.cdwarehouse.com.hk/products/%E9%BB%83%E5%81%89%E6%96%87-wyman-wong-%E9%BB%83%E5%81%89%E6%96%87%E4%BD%9C%E5%93%81%E5%B1%95-%E6%BC%94%E5%94%B1%E6%9C%83-4dvd" target="_blank" rel="noopener noreferrer">查看完整詳情</a></p>
+            <h3>CHIN UP!</h3>
+            <p><strong>歌手：</strong>陈奕迅</p>
+            <p><strong>类型：</strong>录音室专辑</p>
+            <p><strong>详情页：</strong><a href="https://zh.wikipedia.org/zh-cn/CHIN_UP!" target="_blank" rel="noopener noreferrer">查看维基词条</a></p>
           </article>
         </dialog>
 
-        <dialog class="record-modal" id="record-modal-eason">
+        <dialog class="record-modal" id="record-modal-taste">
           <article class="record-modal-card">
             <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
             <p class="section-eyebrow">DISC DETAIL</p>
-            <h3>陳奕迅 Eason Chan - Fear and Dreams Live (2Bluray)</h3>
-            <p><strong>編號：</strong>68830d43114225000ebc9a1b</p>
-            <p><strong>價格：</strong>HK$469.00</p>
-            <p><strong>內容：</strong>2Bluray，收錄 FEAR and DREAMS 巡演完整現場曲目與內容。</p>
-            <p><strong>商品頁：</strong><a href="https://www.cdwarehouse.com.hk/products/%E6%96%B0%E8%B2%A8%E9%A0%90%E8%B3%BC-%E9%99%B3%E5%A5%95%E8%BF%85-eason-chan-fear-and-dreams-2bluray" target="_blank" rel="noopener noreferrer">查看完整詳情</a></p>
+            <h3>Taste the Atmosphere</h3>
+            <p><strong>歌手：</strong>陈奕迅</p>
+            <p><strong>类型：</strong>EP</p>
+            <p><strong>详情页：</strong><a href="https://zh.wikipedia.org/wiki/Taste_the_Atmosphere" target="_blank" rel="noopener noreferrer">查看维基词条</a></p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="record-modal-stranger">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">DISC DETAIL</p>
+            <h3>Stranger Under My Skin</h3>
+            <p><strong>歌手：</strong>陈奕迅</p>
+            <p><strong>类型：</strong>EP</p>
+            <p><strong>详情页：</strong><a href="http://zh.wikipedia.org/zh-tw/Stranger_Under_My_Skin" target="_blank" rel="noopener noreferrer">查看维基词条</a></p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="record-modal-u87">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">DISC DETAIL</p>
+            <h3>U87</h3>
+            <p><strong>歌手：</strong>陈奕迅</p>
+            <p><strong>类型：</strong>录音室专辑</p>
+            <p><strong>详情页：</strong><a href="https://zh.wikipedia.org/wiki/U87_(%E4%B8%93%E8%BE%91)" target="_blank" rel="noopener noreferrer">查看维基词条</a></p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="record-modal-whats-going-on">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">DISC DETAIL</p>
+            <h3>What's Going On...?</h3>
+            <p><strong>歌手：</strong>陈奕迅</p>
+            <p><strong>类型：</strong>录音室专辑</p>
+            <p><strong>详情页：</strong><a href="https://zh.wikipedia.org/wiki/What%27s_Going_On...%3F" target="_blank" rel="noopener noreferrer">查看维基词条</a></p>
+          </article>
+        </dialog>
+
+        <dialog class="record-modal" id="record-modal-h3m">
+          <article class="record-modal-card">
+            <button class="record-modal-close" type="button" data-record-close aria-label="关闭详情">×</button>
+            <p class="section-eyebrow">DISC DETAIL</p>
+            <h3>H³M</h3>
+            <p><strong>歌手：</strong>陈奕迅</p>
+            <p><strong>类型：</strong>录音室专辑</p>
+            <p><strong>详情页：</strong><a href="https://zh.wikipedia.org/wiki/H%C2%B3M" target="_blank" rel="noopener noreferrer">查看维基词条</a></p>
           </article>
         </dialog>
 
@@ -233,6 +301,6 @@
         <a href="../guestbook/index.html">暖心寄语</a>
       </nav>
     </footer>
-    <script src="./record-modal.js"></script>
+    <script type="module" src="./record-modal.js"></script>
   </body>
 </html>

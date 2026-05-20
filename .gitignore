@@ -1,1 +1,6 @@
 .DS_Store
+node_modules/
+dist/
+.env.deploy
+backend/node_modules/
+backend/data/

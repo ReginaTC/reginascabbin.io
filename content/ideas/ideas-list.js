@@ -1,5 +1,7 @@
+import { IDEAS_POSTS } from "./posts-data.js";
+
 (function () {
-  const posts = Array.isArray(window.IDEAS_POSTS) ? window.IDEAS_POSTS.slice() : [];
+  const posts = Array.isArray(IDEAS_POSTS) ? IDEAS_POSTS.slice() : [];
   const searchInput = document.querySelector("#ideas-search-input");
   const listEl = document.querySelector("#ideas-list");
   const resultCountEl = document.querySelector("#ideas-result-count");

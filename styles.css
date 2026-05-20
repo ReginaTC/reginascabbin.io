@@ -717,17 +717,15 @@ main {
 }
 
 .shelf-cover {
+  display: block;
   flex: 0 0 29.6%;
   aspect-ratio: 1 / 1;
+  width: 29.6%;
+  height: auto;
   border-radius: 6px;
   border: 1px solid rgba(125, 91, 60, 0.32);
-  background:
-    linear-gradient(180deg, rgba(255, 252, 246, 0.6), rgba(239, 221, 196, 0.5)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(188, 157, 120, 0.08) 0 2px,
-      rgba(255, 255, 255, 0.12) 2px 5px
-    );
+  object-fit: cover;
+  background-color: rgba(245, 227, 201, 0.68);
   box-shadow:
     2px 3px 0 rgba(95, 63, 34, 0.16),
     inset 0 0 0 1px rgba(255, 255, 255, 0.34);
@@ -1980,6 +1978,26 @@ body.subpage .zone-card {
   background: linear-gradient(180deg, #9f6640 0%, #7f4f2f 100%);
   color: #fff8ef;
   cursor: pointer;
+}
+
+.guestbook-form button:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
+.guestbook-status {
+  margin: 2px 0 0;
+  min-height: 1.35em;
+  color: var(--muted-soft);
+  font-size: 0.88rem;
+}
+
+.guestbook-status.is-error {
+  color: #924534;
+}
+
+.guestbook-status.is-success {
+  color: #4f6f3d;
 }
 
 .guestbook-right .section-head {

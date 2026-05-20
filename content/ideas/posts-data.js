@@ -1,4 +1,4 @@
-window.IDEAS_POSTS = [
+export const IDEAS_POSTS = [
   {
     id: "spring-musical",
     title: "春日里的第一场音乐剧：台前幕后的感动",

@@ -61,16 +61,29 @@
         <section class="guestbook-wall">
           <aside class="guestbook-left">
             <p>留一句话，给下一位路过的人。</p>
-            <form class="guestbook-form" onsubmit="return false;">
+            <form class="guestbook-form" id="guestbook-form">
               <label>
                 署名
-                <input type="text" placeholder="怎么称呼你" />
+                <input
+                  id="guestbook-author"
+                  name="author"
+                  type="text"
+                  maxlength="40"
+                  placeholder="怎么称呼你（可不填）"
+                />
               </label>
               <label>
                 留言
-                <textarea placeholder="写一句你想留下的话。"></textarea>
+                <textarea
+                  id="guestbook-message"
+                  name="message"
+                  maxlength="280"
+                  required
+                  placeholder="写一句你想留下的话（最多 280 字）。"
+                ></textarea>
               </label>
-              <button type="button">发送</button>
+              <button type="submit" id="guestbook-submit">发送</button>
+              <p class="guestbook-status" id="guestbook-status" role="status" aria-live="polite"></p>
             </form>
           </aside>
 
@@ -117,6 +130,6 @@
         <a href="../diary/index.html">流光碎影</a>
       </nav>
     </footer>
-    <script src="./guestbook-loop.js"></script>
+    <script type="module" src="./guestbook-loop.js"></script>
   </body>
 </html>

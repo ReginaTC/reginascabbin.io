@@ -1,5 +1,7 @@
+import { IDEAS_POSTS } from "./posts-data.js";
+
 (function () {
-  const posts = Array.isArray(window.IDEAS_POSTS) ? window.IDEAS_POSTS : [];
+  const posts = Array.isArray(IDEAS_POSTS) ? IDEAS_POSTS : [];
   const target = document.querySelector("#full-post");
 
   if (!target) {

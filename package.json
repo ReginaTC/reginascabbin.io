@@ -1,0 +1,16 @@
+{
+  "name": "personal-hut",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "guestbook:install": "npm --prefix backend install",
+    "guestbook:start": "npm --prefix backend run start",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}

@@ -1,10 +1,12 @@
+import { DIARY_PHOTOS } from "./diary-data.js";
+
 (function () {
   const currentScript = document.currentScript;
   const assetBaseUrl = currentScript
     ? new URL(".", currentScript.src)
     : new URL("./", window.location.href);
 
-  const photos = Array.isArray(window.DIARY_PHOTOS) ? window.DIARY_PHOTOS.slice() : [];
+  const photos = Array.isArray(DIARY_PHOTOS) ? DIARY_PHOTOS.slice() : [];
   const trackEl = document.querySelector("#diary-film-track");
   const marqueeEl = document.querySelector("#diary-film-marquee");
   const resultCountEl = document.querySelector("#diary-result-count");
@@ -38,7 +40,10 @@
       }
       const title = trigger.getAttribute("data-instax-title") || "拍立得";
       const desc = trigger.getAttribute("data-instax-desc") || "暂无描述";
-      const image = trigger.getAttribute("data-instax-image") || "";
+      const image =
+        trigger.querySelector("img")?.getAttribute("src") ||
+        trigger.getAttribute("data-instax-image") ||
+        "";
       const imageUrl = image ? new URL(image, assetBaseUrl).href : "";
 
       modalTitleEl.textContent = title;
